@@ -132,7 +132,7 @@ void dump(char *file_in)
         printf("bitrate: %dK\n", obj->valueint/1000);
     }
     printf("format: %s\n", fmt);
-    file_out=malloc(strlen(file_in)-3+strlen(fmt));
+    file_out=malloc(strlen(file_in)-3+strlen(fmt)+1);
     strcpy(file_out, file_in);
     strcpy(strrchr(file_out, '.')+1, fmt);
     cJSON_Delete(root);
